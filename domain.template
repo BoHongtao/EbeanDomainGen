@@ -1,0 +1,28 @@
+package com.hulu.shop.common.domain.${package_name};
+
+import io.ebean.Model;
+import io.ebean.annotation.*;
+import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import java.sql.Timestamp;
+import java.util.Date;
+import kotlin.collections.List;
+import java.util.UUID;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.LocalDateTime;
+
+@DocStore
+@Entity
+@Table(name = "${table_name}")
+@MappedSuperclass
+
+public class ${package_name} extends Model {
+    ${filelds_content}
+}
