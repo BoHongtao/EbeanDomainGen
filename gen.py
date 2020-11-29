@@ -74,7 +74,7 @@ WHERE
         # SIZE
         size = '@Size(max = ' + str(field[3]) + ')\n' if (field[3] is not None) else ''
         # column_name
-        column = '@Column(name = "' + field[0] if(field[3] is None) else '@Column(name = "' + field[0] + '",length = ' + str(field[3])
+        column = '@Column(name = "' + field[0] +'"' if(field[3] is None) else '@Column(name = "' + field[0] + '",length = ' + str(field[3])
         if (field[1] == "YES"):
             column = column + "',' nullable = false)\n"
         else:
